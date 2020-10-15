@@ -17,5 +17,5 @@ RUN poetry config virtualenvs.create false
 RUN poetry install -vv --no-dev --no-root
 RUN poetry add google-cloud-bigquery-storage@~1.0
 RUN poetry run prefect backend server
-COPY scripts/prefect.sh .
-ENTRYPOINT ["/laniakea/prefect.sh"]
+COPY scripts/launch.sh .
+ENTRYPOINT ["/laniakea/launch.sh"]
