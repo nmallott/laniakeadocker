@@ -1,3 +1,5 @@
+#!/bin/sh
+
 # Ok sur le même compute
 docker run --name dask_scheduler -itd --network=host --rm nmallott/laniakea dask-scheduler
 docker run --name dask_worker -itd --network=host --rm  nmallott/laniakea dask-worker tcp://localhost:8786
